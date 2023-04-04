@@ -1,0 +1,36 @@
+.home {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0 200px;
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .card {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .collapse-title {
+        padding-right: 1rem;
+    }
+    .action {
+        position: relative;
+        z-index: 99;
+    }
+    .party-item {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        .progress {
+            margin: 0 100px;
+            width: 800px;
+        }
+    }
+    .disconnect {
+        font-size: 24px;
+        text-align: center;
+        margin: 200px 0 50px;
+    }
+}
