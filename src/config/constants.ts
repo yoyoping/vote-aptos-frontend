@@ -1,4 +1,4 @@
-export const DAPP_ADDRESS = '0x495ddaa3cae031de5d574b1e9feba5ec4ee9584bafe0c16c0f585162ca48b5f1'
+export const DAPP_ADDRESS = '0x50f4ed8c5f23a838109f3fb1c202d14b3f42bb6a1a39db7d437513d4698c5bb1'
 
 export const APTOS_NODE_URL = 'https://fullnode.testnet.aptoslabs.com/v1/'
 export const APTOS_FAUCET_URL = 'https://faucet.testnet.aptoslabs.com/v1/'
