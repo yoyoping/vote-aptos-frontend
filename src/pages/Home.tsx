@@ -150,8 +150,8 @@ export default function Home() {
           } */}
           {
             item.item_list.length ? item.item_list.map((item2: any, index2: number) => <div className="flex party-item" key={index + '-' + index2}>
-              <p className="flex-1">{item2.name} <span style={{color: 'rgb(59 130 246)'}}>(票数: {item2.votes.length})</span></p>
-              <progress className="progress progress-info" value={item2.votes.length} max="20"></progress>
+              <div className="min-w-[200px]">{item2.name} <span style={{color: 'rgb(59 130 246)'}}>(票数: {item2.votes.length})</span></div>
+              <progress className="progress progress-info flex-1" value={item2.votes.length} max="20"></progress>
               <button className={item.voted || !item.state ? "btn btn-info btn-disabled" : "btn btn-info"} onClick={() => vote(+item.index, +item2.index)}>投票</button>
             </div>) : <p className="text-center">暂无数据</p>
           }
