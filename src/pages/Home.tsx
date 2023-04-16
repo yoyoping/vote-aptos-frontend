@@ -14,7 +14,7 @@ export default function Home() {
   const isAdmin = account_address == DAPP_ADDRESS
   const client = new AptosClient(APTOS_NODE_URL)
   const [proposalList, setProposalList] = useState<any>([])
-  const [teamParty, setTeamParty] = useState<any>({ name: '', time: '' })
+  const [proposal, setProposal] = useState<any>({ name: '', time: '' })
   const [proposalItemName, setProposalItemName] = useState<string>('')
   const [currentProposal, setCurrentProposal] = useState<number | null>(null)
 
@@ -30,8 +30,8 @@ export default function Home() {
         function: DAPP_ADDRESS + "::proposal::add_proposal",
         type_arguments: [],
         arguments: [
-          teamParty.name,
-          +teamParty.time
+          proposal.name,
+          +proposal.time
         ],
       },
       { gas_unit_price: 100 }
@@ -181,18 +181,18 @@ export default function Home() {
             <label className="label">
               <span className="label-text">输入活动名称</span>
             </label>
-            <input type="text" placeholder="请输入" className="input input-bordered input-info w-full" value={teamParty.name} onInput={(event: any) => setTeamParty({ ...teamParty, name: event.target.value })} />
+            <input type="text" placeholder="请输入" className="input input-bordered input-info w-full" value={proposal.name} onInput={(event: any) => setProposal({ ...proposal, name: event.target.value })} />
           </div>
           <div className="form-control w-full mt-5">
             <label className="label">
               <span className="label-text">输入活动时间</span>
             </label>
-            <input type="text" placeholder="请输入" className="input input-bordered input-info w-full" value={teamParty.time} onInput={(event: any) => setTeamParty({ ...teamParty, time: event.target.value })} />
+            <input type="text" placeholder="请输入" className="input input-bordered input-info w-full" value={proposal.time} onInput={(event: any) => setProposal({ ...proposal, time: event.target.value })} />
           </div>
 
           <div className="modal-action">
             <label htmlFor="my-modal" className="btn btn-outline">取消</label>
-            <label htmlFor="my-modal" className="btn btn-primary" onClick={() => { addProposal(), setTeamParty({ name: '', time: '' }) }}>确定</label>
+            <label htmlFor="my-modal" className="btn btn-primary" onClick={() => { addProposal(), setProposal({ name: '', time: '' }) }}>确定</label>
           </div>
         </div>
       </div>
