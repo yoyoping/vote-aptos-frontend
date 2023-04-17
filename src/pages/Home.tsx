@@ -68,7 +68,7 @@ export default function Home() {
           partyIndex
         ],
       },
-      { gas_unit_price: 100 }
+      { gas_unit_price: 10000 }
     )
     getProposalList()
   }
